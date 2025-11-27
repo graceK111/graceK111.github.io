@@ -1,37 +1,127 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace的个人主页</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
+        /* 项目展示区域样式 */
+        .projects-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
         }
-        h1 { color: #333; }
-        .intro { background: #f5f5f5; padding: 20px; border-radius: 5px; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
     </style>
 </head>
 <body>
-    <h1>你好！欢迎来到我的个人主页</h1>
+    <!-- 您现有的主页内容 -->
     
-    <div class="intro">
-        <h2>关于我</h2>
-        <p>我是一名XX的研究人员。</p>
-    </div>
-
-    <h2>研究方向</h2>
-    <ul>
-        <li>数学</li>
-        <li>语文</li>
-        <li>英语</li>
-    </ul>
-
-    <h2>联系信息</h2>
-    <p>邮箱：your-email@example.com</p>
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">我的项目</h2>
+            <div class="project-grid">
+                <!-- 项目1 -->
+                <div class="project-card">
+                    <h3>个人博客系统</h3>
+                    <p>基于Vue.js和Node.js开发的现代化博客系统，支持Markdown写作、评论功能和响应式设计。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/graceK111/blog-system" class="btn btn-primary" target="_blank">查看代码</a>
+                        <a href="https://gracek111-blog-demo.netlify.app" class="btn btn-secondary" target="_blank">在线演示</a>
+                    </div>
+                </div>
+                
+                <!-- 项目2 -->
+                <div class="project-card">
+                    <h3>任务管理应用</h3>
+                    <p>使用React构建的任务管理工具，支持拖拽排序、优先级设置和团队协作功能。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/graceK111/task-manager" class="btn btn-primary" target="_blank">查看代码</a>
+                        <a href="https://gracek111-tasks.vercel.app" class="btn btn-secondary" target="_blank">在线演示</a>
+                    </div>
+                </div>
+                
+                <!-- 项目3 -->
+                <div class="project-card">
+                    <h3>天气小程序</h3>
+                    <p>微信小程序开发的实时天气应用，提供精准天气预报和生活指数建议。</p>
+                    <div class="project-links">
+                        <a href="https://github.com/graceK111/weather-miniprogram" class="btn btn-primary" target="_blank">查看代码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
